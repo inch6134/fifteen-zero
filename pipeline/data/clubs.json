@@ -1,0 +1,6 @@
+[
+  {"name": "Real Madrid", "slug": "real-madrid", "country": "ESP", "fbref_id": "206d90db"},
+  {"name": "Barcelona", "slug": "barcelona", "country": "ESP", "fbref_id": "206d90db"},
+  {"name": "Bayern Munich", "slug": "bayern-munich", "country": "GER", "fbref_id": "054efa67"}
+  ...
+]

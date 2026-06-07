@@ -1,0 +1,10 @@
+# Django
+*.pyc
+__pycache__/
+db.sqlite3
+staticfiles/
+.env
+
+# Pipeline data
+pipeline/data/processed/
+pipeline/data/raw/

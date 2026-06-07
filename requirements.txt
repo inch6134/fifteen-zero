@@ -1,0 +1,8 @@
+django>=6.0
+djangorestframework
+psycopg2-binary
+dj-database-url
+whitenoise
+gunicorn
+python-dotenv
+git+https://github.com/inch6134/fifteen-zero-scoring.git
