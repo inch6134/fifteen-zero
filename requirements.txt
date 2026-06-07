@@ -5,4 +5,4 @@ dj-database-url
 whitenoise
 gunicorn
 python-dotenv
-git+https://github.com/inch6134/fifteen-zero-scoring.git
+# git+https://github.com/inch6134/fifteen-zero-scoring.git

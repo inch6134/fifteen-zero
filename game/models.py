@@ -107,7 +107,7 @@ class Player(models.Model):
         return self.name
 
     class Meta:
-        ordering['name']
+        ordering = ['name']
 
 class PlayerEraStats(models.Model):
     player = models.ForeignKey(Player, on_delete=models.CASCADE, related_name='era_stats')
