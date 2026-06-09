@@ -1,4 +1,4 @@
-fbrefdata
+soccerdata
 pandas
 psycopg2-binary
 python-dotenv
