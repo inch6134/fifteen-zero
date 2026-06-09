@@ -12,7 +12,7 @@ Then update STANDARD_COL_MAP and KEEPERS_COL_MAP accordingly.
 import pandas as pd
 from config import (
     FBREF_NAME_TO_SLUG, POSITION_GROUPS, PROCESSED_DIR, RAW_DIR, ERAS, POSITION_OVERRIDES,
-    FBREF_POSITION_MAP, STAGE_GAMES, STAGE_POINTS, UCL_STAGES,
+    FBREF_POSITION_MAP, STAGE_GAMES, STAGE_POINTS, UCL_STAGES, CLUBS,
 )
 
 STANDARD_COL_MAP = {
@@ -164,7 +164,7 @@ def transform():
         seasons      = ('season',       list),
     ).reset_index()
 
-    agg = agg[agg['appearances']] >= MIN_APPEARANCES.copy()
+    agg = agg[agg['appearances'] >= MIN_APPEARANCES].copy()
 
     stage_cols = agg.apply(
         lambda r: ucl_stage_stats(r['club_slug'], r['seasons']), axis=1, result_type='expand'
