@@ -16,17 +16,24 @@ from config import (
 )
 
 STANDARD_COL_MAP = {
-    # soccerdata names
-    'player': 'player_name', 'squad': 'squad', 'pos': 'fbref_pos',
-    'nationality': 'nationality', 'games': 'appearances', 'minutes': 'minutes',
-    'goals': 'goals', 'assists': 'assists',
-    'cards_yellow': 'yellow_cards', 'cards_red': 'red_cards',
-    # Raw FBref fallbacks
-    'Player': 'player_name', 'Squad': 'squad', 'Pos': 'fbref_pos',
-    'Nation': 'nationality', 'MP': 'appearances', 'Min': 'minutes',
-    'Gls': 'goals', 'Ast': 'assists', 'CrdY': 'yellow_cards', 'CrdR': 'red_cards',
+    'player':      'player_name',
+    'team':        'squad',
+    'nation':      'nationality',
+    'pos':         'fbref_pos',
+    # Stat columns — may be prefixed after column flattening
+    'MP':               'appearances',
+    'Playing_Time_MP':  'appearances',
+    'Min':              'minutes',
+    'Playing_Time_Min': 'minutes',
+    'Gls':              'goals',
+    'Performance_Gls':  'goals',
+    'Ast':              'assists',
+    'Performance_Ast':  'assists',
+    'CrdY':             'yellow_cards',
+    'Performance_CrdY': 'yellow_cards',
+    'CrdR':             'red_cards',
+    'Performance_CrdR': 'red_cards',
 }
-
 KEEPERS_COL_MAP = {
     'player': 'player_name', 'squad': 'squad', 'games': 'appearances',
     'clean_sheets': 'clean_sheets', 'gk_clean_sheets': 'clean_sheets',
@@ -38,8 +45,13 @@ MIN_APPEARANCES   = 1
 STAGE_ORDER       = ['winner', 'final', 'semi', 'quarter', 'r16', 'playoffs', 'group']
 
 
-def season_start_year(season: str) -> int:
-    return int(season.split('-')[0])
+def season_start_year(season) -> int:
+    if isinstance(season, (int, float)):
+        return int(season) - 1      # 1993 → 1992
+    parts = str(season).split('-')
+    if len(parts) == 1:
+        return int(parts[0]) - 1   # "1993" → 1992
+    return int(parts[0])            # "1992-1993" or "1992-93" → 1992
 
 
 def get_era(start_year: int) -> dict | None:

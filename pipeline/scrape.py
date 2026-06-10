@@ -23,11 +23,19 @@ def scrape_season(season: str):
     reader = sd.FBref(leagues=UCL_LEAGUE, seasons=season)
 
     if not std_path.exists():
-        reader.read_player_season_stats(stat_type='standard').to_csv(std_path, index=False)
+        df = reader.read_player_season_stats(stat_type='standard')
+        df = df.reset_index()  # moves league/season/team/player into regular columns
+        df.columns = ['_'.join(filter(None, col)).strip() if isinstance(col, tuple) else col
+              for col in df.columns]
+        df.to_csv(std_path, index=False) 
         time.sleep(REQUEST_DELAY)
 
     if not gk_path.exists():
-        reader.read_player_season_stats(stat_type='keepers').to_csv(gk_path, index=False)
+        df = reader.read_player_season_stats(stat_type='keeper')
+        df = df.reset_index()  # moves league/season/team/player into regular columns
+        df.columns = ['_'.join(filter(None, col)).strip() if isinstance(col, tuple) else col
+              for col in df.columns]
+        df.to_csv(std_path, index=False) 
         time.sleep(REQUEST_DELAY)
 
 

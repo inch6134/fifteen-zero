@@ -12,9 +12,9 @@ UCL_STAGES = [
     ("final", "Finalist"),
     ("semi", "Semi-Finals"),
     ("quarter", "Quarter-Finals"),
-    ("r16", "Round of 16"),
+    ("r16", "Round of 16 / Group Stage 2"),
     ("playoffs", "Knockout Playoffs"),
-    ("group", "Group Stage"),
+    ("group", "Group Stage / League Phase"),
 ]
 
 POSITIONS = [
