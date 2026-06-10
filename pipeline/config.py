@@ -28,13 +28,13 @@ STAGE_POINTS = {
 # Games a team plays per UCL season depending on exit stage
 # Pre-2024: 6-game group stage. 2024+: 8-game league phase.
 STAGE_GAMES = {
-    'group':    0,
-    'playoffs': 0,
-    'r16':      2,
-    'quarter':  4,
-    'semi':     6,
-    'final':    7,
-    'winner':   7,
+    "group": 0,
+    "playoffs": 0,
+    "r16": 2,
+    "quarter": 4,
+    "semi": 6,
+    "final": 7,
+    "champion": 7,
 }
 
 POSITION_GROUPS = {

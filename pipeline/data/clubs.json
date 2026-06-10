@@ -23,6 +23,5 @@
   {"name": "Tottenham Hotspur FC", "short_name": "Tottenham", "slug": "tottenham", "country": "GBR", "league": "Premier League", "fbref_name": "Tottenham Hotspur", "fbref_id": "361ca564", "primary_color": "#131F53", "secondary_color": "#FFFFFF"},
   {"name": "SL Benfica", "short_name": "Benfica", "slug": "benfica", "country": "PRT", "league": "Primeira Liga", "fbref_name": "Benfica", "fbref_id": "a77c513e", "primary_color": "#E83030", "secondary_color": "#FFFFFF"},
   {"name": "Valencia CF", "short_name": "Valencia", "slug": "valencia", "country": "ESP", "league": "La Liga", "fbref_name": "Valencia", "fbref_id": "dcc91a7b", "primary_color": "#FFDF1C", "secondary_color": "#EE3524"},
-  {"name": "PSV Eindhoven", "short_name": "PSV", "slug": "psv", "country": "NLD", "league": "Eredivisie", "fbref_name": "PSV Eindhoven", "fbref_id": "e334d850", "primary_color": "#ED1C24", "secondary_color": "#FFFFFF"},
-  {"name": "", "short_name": "", "slug": "", "country": "", "league": "", "fbref_name": "", "fbref_id": "", "primary_color": "", "secondary_color": ""},
+  {"name": "PSV Eindhoven", "short_name": "PSV", "slug": "psv", "country": "NLD", "league": "Eredivisie", "fbref_name": "PSV Eindhoven", "fbref_id": "e334d850", "primary_color": "#ED1C24", "secondary_color": "#FFFFFF"}
 ]

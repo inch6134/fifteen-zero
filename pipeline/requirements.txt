@@ -1,4 +1,6 @@
 soccerdata
+selenium
+webdriver-manager
 pandas
 psycopg2-binary
 python-dotenv
